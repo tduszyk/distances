@@ -1,6 +1,5 @@
-import os, csv
-from scipy.spatial import distance
-from itertools import permutations
+import os, csv, math
+from itertools import combinations
 
 # Variables
 list1 = []
@@ -21,10 +20,15 @@ with open(shooting_data_csv, 'r') as csvfile:
     # Remove header
     csv_header = next(csvreader)
 
+    # Convert csv to a list
     my_list = list(csvreader)
 
-#print(my_list)
 
-for i in my_list:
-    print(i)
+for i_list in my_list:
+    print(i_list)
+    for comb in combinations(i_list,2):
+        #print(math.dist(comb[0],comb[1]))
+        print((comb[0]))
 
+
+#        .338LMCh1s'sF4v0ritC4l!
